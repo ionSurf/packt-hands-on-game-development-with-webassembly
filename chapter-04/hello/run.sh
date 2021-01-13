@@ -1,3 +1,4 @@
 #!/bin/bash
 
-emcc src/hello_sdl.c --emrun --preload-file src/font -s USE_SDL=2 -s USE_SDL_TTF=2 -o hello_sdl.html && emrun --browser firefox --port 8080 hello_sdl.html
+cd src/
+emcc hello_sdl.c --emrun --preload-file font -s USE_SDL=2 -s USE_SDL_TTF=2 -o build/hello_sdl.html && emrun --browser firefox --serve_after_close --kill_start build/hello_sdl.html
