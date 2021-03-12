@@ -3,6 +3,7 @@
 PlayerShip* player;
 EnemyShip* enemy;
 ProjectilePool* projectile_pool;
+
 Uint32 last_time;
 Uint32 last_frame_time;
 Uint32 current_time;
@@ -12,9 +13,9 @@ SDL_Renderer *renderer;
 
 SDL_Rect dest = {.x = 160, .y = 100, .w = 16, .h = 16 };
 
-SDL_Texture *sprite_texture;
-
 SDL_Event event;
+
+SDL_Texture *sprite_texture;
 
 bool left_key_down = false;
 bool right_key_down = false;
